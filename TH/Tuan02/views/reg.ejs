@@ -1,0 +1,47 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<style>
+  #example2 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+  }
+</style>
+
+<form action="/register" method="POST">
+    <script>
+        function isChecked(chk,sub1) {
+        var myLayer = document.getElementById(sub1);
+        if (chk.checked == true) {
+            myLayer.disabled = false;
+        } else {
+            myLayer.disabled = true;
+        }}
+
+       
+   </script>
+    <br>
+    <table id ="table1">
+
+      <div class="form-group" id = "example2">
+        <label for="text">Name</label>
+        <input type="text" placeholder="Name" class="form-control" id="Name" name="Name">
+      </div>
+      <div class="form-group" id = "example2">
+        <label for="Email">Email</label>
+        <input type="email" placeholder="Email" class="form-control" id="Email" name="Email">
+      </div>  
+      <div class="form-group" id = "example2">
+        <label for="phone">Phone number</label>
+        <input type="number" placeholder="phone" class="form-control" id="phone" name="phone">
+      </div>  
+      
+      <h2> <u>Will you attend?</u></h2>
+      <input type="checkbox" id="termsChkbx " onchange="isChecked(this,'sub1')"/></p>
+      <h3><input type="submit" name="submit" value="Sign up" id="sub1" disabled="disabled"  /></h3>
+      
+    </table>
+        
+    </form>
+<%- include('footer'); -%>

@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+
+<style>
+    #example2 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    }
+</style>
+
+    <form action="/login" method="POST">
+       
+        <br>
+   
+            <div class="form-group" id = "example2">
+                <label for="text">Email</label>
+                <input type="text" value="admin" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group" id = "example2">
+                <label for="Email">Password</label>
+                <input type="password" value="admin" class="form-control" id="password" name="password">
+            </div>  
+            <input type="checkbox" id="termsChkbx "> <p>Remember password</p>
+            <button type="submit" class="btn btn-info">Log in</button>
+            
+      
+        
+    </form>
+<%- include('footer'); -%>

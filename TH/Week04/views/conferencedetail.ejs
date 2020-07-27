@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+ <%- include('./navbar'); -%>
+
+    <br>
+    <a  class="btn btn-outline-secondary" type="button">Add new </a>
+    <br>
+    <br>
+   <div class="row justify-content-center">
+        <div class="col-8">
+            <ul class="list-group">
+                <% if (confList) { %>
+                    <% confList.forEach(conf => { %>
+                        <li class="list-group-item d-flex justify-content-between align-items-center"> 
+                            <%= conf.name %> <br>
+                            <%= conf.detail %> <br>
+                            Thời gian: <%= conf.timeStarted %> 
+                            <a href="/conferencedetail/<%= conf.id %>" class="btn btn-outline-secondary" type="button">Edit</a>
+                            <a href="/admin" class="btn btn-outline-secondary" type="button">List attend</a>
+                            
+                        </li>
+                        
+                        <% }); %>
+                        <% } %>
+                </ul>
+        </div>
+    </div>
+
+
+ <%- include('./footer'); -%>

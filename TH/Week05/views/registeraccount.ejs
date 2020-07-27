@@ -1,0 +1,37 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<style>
+  #example2 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+  }
+</style>
+
+<form action="/registeraccount" method="POST">
+  
+    <br>
+    <table id ="table1">
+
+      <div class="form-group" id = "example2">
+        <label for="text">Name</label>
+        <input type="text" placeholder="Name" class="form-control" id="Name" name="Name">
+      </div>
+      <div class="form-group" id = "example2">
+        <label for="Email">Email</label>
+        <input type="email" placeholder="Email" class="form-control" id="Email" name="Email">
+      </div>  
+      <div class="form-group" id = "example2">
+        <label for="phone">Phone number</label>
+        <input type="number" placeholder="phone" class="form-control" id="phone" name="phone">
+      </div>  
+       <div class="form-group" id = "example2">
+        <label for="password"> Password</label>
+        <input type="password"  class="form-control" id="password" name="password">
+      </div>
+        <button type="submit" class="btn btn-info">Sign up</button>
+    </table>
+        
+    </form>
+<%- include('footer'); -%>

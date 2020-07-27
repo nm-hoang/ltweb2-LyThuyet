@@ -1,0 +1,36 @@
+<%- include('header'); -%>
+<%- include('./navbar') %>
+   
+
+    
+<br>     
+<% if (currentUser !== null) { %>    
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Attend</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% if(attendlist) { %>
+            <% attendlist.forEach(attend => { %>
+          <tr>
+            <td><%= attend.name %></td>
+            <td><%= attend.email %></td>
+            <td><%= attend.phonenumber %></td>
+            <td><%= attend.status %></td>
+          </tr>
+        <% }); %>
+        <% } %>
+        </tbody>
+  </table>
+
+<% } else{ %>
+    <h3>Vui lòng đăng nhập</h3>
+    
+<%} %>
+<%- include('footer'); -%>
+

@@ -1,0 +1,41 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<% if (currentUser !== null) { %>    
+<style>
+  #example2 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+  }
+</style>
+
+
+<form action="/config" method="POST">
+    
+    <br>
+    <table id ="table1">
+        
+        <div class="form-group" id = "example2">
+            <label for="text">Nội dung Home</label>
+            <input type="text" value="Chào mừng đến với công ty" class="form-control" id="introduce" name="introduce">
+        </div>
+        <div class="form-group" id = "example2">
+            <label for="text">Nội dung hồi đáp tham gia</label>
+            <input type="text" value="Cảm ơn bạn đã đồng ý tham dự" class="form-control" id="replyYes" name="replyYes">
+        </div>  
+        <div class="form-group" id = "example2">
+            <label for="text">Nội dung hồi đáp KHÔNG tham gia</label>
+            <input type="text" value="Rất tiếc chưa có dịp phục vụ bạn" class="form-control" id="replyNo" name="replyNo">
+        </div> 
+        <br> 
+        <button type="submit" class="btn btn-info">Chấp nhận</button>
+    </table>
+    
+</form>
+
+    <% } else{ %>
+        <h3>Vui lòng đăng nhập</h3>
+        
+    <%} %>
+<%- include('footer'); -%>
