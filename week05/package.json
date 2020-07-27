@@ -1,0 +1,27 @@
+{
+  "name": "hello-web2byhoangg",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Minh Hoang <nmhoang.28@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "multer": "^1.4.2",
+    "password-hash": "^1.2.2",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "routes": "^2.1.0",
+    "sequelize": "^5.21.7"
+  },
+  "devDependencies": {},
+  "description": ""
+}
